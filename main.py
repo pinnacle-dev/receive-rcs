@@ -165,10 +165,6 @@ class MessageHandler:
                         headers={"Content-Type": "application/json"},
                     )
                     
-                    # Add debug logging
-                    print(f"Astica API Status Code: {response.status_code}")
-                    print(f"Astica API Response Text: {response.text}")
-                    
                     # Check status code before parsing JSON
                     response.raise_for_status()
                     result = response.json()
